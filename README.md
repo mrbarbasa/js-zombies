@@ -1,8 +1,16 @@
 # JavaScript Zombies
 
 1. Navigate to this project in your terminal.
-2. Complete the exercises by following the comments in `zombies.js`.
-3. To run the game, enter `node zombies.js` in your terminal.
+2. Run `http-server`.
+3. Open [http://localhost:8080](http://localhost:8080) in Chrome.  *You should see failing tests.*
+4. Complete the exercise by following the comments in `zombies.js` or the README.
+
+For each test you complete:
+
+1. Save `constructors.js`.
+2. Reload [http://localhost:8080](http://localhost:8080) in Chrome.
+3. Check if the test passes.
+4. If it passes, commit your work.
 
 ---
 
