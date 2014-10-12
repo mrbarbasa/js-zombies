@@ -154,8 +154,8 @@ useItem(item)
 -----------------------------
 *Player uses an item from the pack.*
 
-If the item is a weapon, the player should equip the item.
-If the item is food, the player should eat the item.
+If the item is a weapon, the player should equip the item.  
+If the item is food, the player should eat the item.  
 You should be able to invoke this function on a Player instance.
 
 **Parameters**  
@@ -166,9 +166,9 @@ equippedWith()
 -----------------------------
 *Player checks their equipment.*
 
-Prints the player's name and equipped weapon's name.
-If nothing is equipped, prints a message saying so.
-Also returns the equipped weapon's name or false if nothing is equipped.
+Prints the player's name and equipped weapon's name.  
+If nothing is equipped, prints a message saying so.  
+Also returns the equipped weapon's name or false if nothing is equipped.  
 You should be able to invoke this function on a Player instance.
 
 **Returns**: weapon name or `false`: string/boolean, Weapon name or `false` if nothing is equipped.
@@ -178,13 +178,15 @@ attack(zombie)
 -----------------------------
 *Player attacks a zombie.*
 
-Calculate the player's base attack damage by passing this instance to the
-  calculateAttackDamage function, which you will define later.
-If the player has a weapon equipped, print a message with the weapon's name.
-  The total damage then becomes the base player damage plus the weapon damage.
-If the player has no weapon equipped, print any weaponless attack to console.
-  In this case, the total damage is just the base player damage.
-The zombie then takes all this damage (this is a function you'll define later).
+Calculate the player's base attack damage by passing this instance to the `calculateAttackDamage` function, which you will define later.
+
+If the player has a weapon equipped, print a message with the weapon's name.  
+The total damage then becomes the base player damage plus the weapon damage.
+
+If the player has no weapon equipped, print any weaponless attack to console.  
+In this case, the total damage is just the base player damage.
+
+The zombie then takes all this damage (this is a function you'll define later).  
 You should be able to invoke this function on a Player instance.
 
 **Parameters**  
@@ -195,10 +197,10 @@ takeDamage(damage)
 -----------------------------
 *Player takes damage.*
 
-The player's health decreases by the amount of damage taken.
-The player's health should not become lower than 0.
-If the player's health is 0, set their isAlive property to `false`.
-If the player is dead, print a message that they're dead and the game is over.
+The player's health decreases by the amount of damage taken.  
+The player's health should not drop lower than 0.  
+If the player's health is 0, set their `isAlive` property to false.  
+If the player is dead, print a message that they're dead and the game is over.  
 You should be able to invoke this function on a Player instance.
  
 **Parameters**  
@@ -228,10 +230,9 @@ attack(player)
 -----------------------------
 *Zombie attacks a player.*
 
-Calculate the zombie's attack damage by passing this instance to the
-  calculateAttackDamage function, which you will define later.
-Print any zombie attack message you'd like; just include the player's name.
-The player then takes all this damage.  Use a method you already defined.
+Calculate the zombie's attack damage by passing this instance to the `calculateAttackDamage` function, which you will define later.  
+Print any zombie attack message you'd like; just include the player's name.  
+The player then takes all this damage (use a method you already defined).  
 You should be able to invoke this function on a Zombie instance.
  
 **Parameters**  
@@ -242,10 +243,10 @@ takeDamage(damage)
 -----------------------------
 *Zombie takes damage.*
 
-The zombie's health decreases by the amount of damage taken.
-The zombie's health should not become lower than 0.
-If the zombie's health is 0, set their isAlive property to `false`.
-If the zombie is dead, print a message that the zombie is slain.
+The zombie's health decreases by the amount of damage taken.  
+The zombie's health should not drop lower than 0.  
+If the zombie's health is 0, set their `isAlive` property to false.  
+If the zombie is dead, print a message that the zombie is slain.  
 You should be able to invoke this function on a Zombie instance.
  
 **Parameters**  
@@ -256,15 +257,14 @@ FastZombie(health, strength, speed)
 -----------------------------
 *Creates a fast zombie.*
 
-Use the call method on the Zombie constructor.
+Use the `call` method on the Zombie constructor.  
 Set FastZombie's prototype to a new instance of Zombie.
 
-For the charge method, calculate the zombie's attack damage by passing
-  this instance to the calculateAttackDamage function.  Player takes this
-  amount of damage.
+For the `charge` method, calculate the zombie's attack damage by passing this instance to the `calculateAttackDamage` function.  Player takes this amount of damage.  
 Print any zombie charge message you'd like; just include the player's name.
-Player takes additional damage if the zombie's speed is greater than the player's.
-  Additional damage should equal the floor of half the zombie attack damage.
+
+Player takes additional damage if the zombie's speed is greater than the player's.  
+Additional damage should equal the floor of half the zombie attack damage.
 
 **Parameters**  
 `health`: number, The zombie's health.  
@@ -279,15 +279,14 @@ StrongZombie(health, strength, speed)
 -----------------------------
 *Creates a strong zombie.*
 
-Use the call method on the Zombie constructor.
+Use the `call` method on the Zombie constructor.  
 Set StrongZombie's prototype to a new instance of Zombie.
 
-For the crush method, calculate the zombie's attack damage by passing
-  this instance to the calculateAttackDamage function.  Player takes this
-  amount of damage.
+For the `crush` method, calculate the zombie's attack damage by passing this instance to the `calculateAttackDamage` function.  Player takes this amount of damage.  
 Print any zombie crush message you'd like; just include the player's name.
-Player takes additional damage if the zombie's strength is greater than the player's.
-  Additional damage should equal the floor of a quarter of the zombie attack damage.
+
+Player takes additional damage if the zombie's strength is greater than the player's.  
+Additional damage should equal the floor of a quarter of the zombie attack damage.
   
 **Parameters**  
 `health`: number, The zombie's health.  
@@ -302,15 +301,14 @@ RangedZombie(health, strength, speed)
 -----------------------------
 *Creates a ranged zombie.*
 
-Use the call method on the Zombie constructor.
+Use the `call` method on the Zombie constructor.  
 Set RangedZombie's prototype to a new instance of Zombie.
 
-For the spit method, calculate the zombie's attack damage by passing
-  this instance to the calculateAttackDamage function.  Player takes this
-  amount of damage.
+For the `spit` method, calculate the zombie's attack damage by passing this instance to the `calculateAttackDamage` function.  Player takes this amount of damage.  
 Print any zombie spit message you'd like; just include the player's name.
-Player takes additional damage if their current health is less than half of max health.
-  Additional damage should equal the floor of a third of the zombie attack damage.
+
+Player takes additional damage if their current health is less than half of max health.  
+Additional damage should equal the floor of a third of the zombie attack damage.
   
 **Parameters**  
 `health`: number, The zombie's health.  
@@ -325,17 +323,15 @@ ExplodingZombie(health, strength, speed)
 -----------------------------
 *Creates an exploding zombie.*
 
-Use the call method on the Zombie constructor.
+Use the `call` method on the Zombie constructor.  
 Set ExplodingZombie's prototype to a new instance of Zombie.
 
-For the explode method, calculate the zombie's attack damage by passing
-  this instance to the calculateAttackDamage function.  Player takes this
-  amount of damage.
+For the `explode` method, calculate the zombie's attack damage by passing this instance to the `calculateAttackDamage` function.  Player takes this amount of damage.  
 Print any zombie explode message you'd like; just include the player's name.
-Player takes additional damage if the zombie's speed is greater than the
-  player's and the player's current health is less than half of max health.
-  Additional damage should equal the floor of half the zombie attack damage.
-ExplodingZombie should now be dead (health set to 0, isAlive set to `false`).
+
+Player takes additional damage if the zombie's speed is greater than the player's speed, and the player's current health is less than half of max health.  
+Additional damage should equal the floor of half the zombie attack damage.  
+ExplodingZombie should now be dead (`health` set to 0, `isAlive` set to false).
 
 **Parameters**  
 `health`: number, The zombie's health.  
@@ -350,18 +346,16 @@ calculateAttackDamage(creature)
 -----------------------------
 *Calculates the attack damage of a creature instance.*
 
-Use `instanceof` to determine what type of object creature is.  
-Then, based on the type, set a variable called `randomizer` equal to  
-  a `Math.floor((Math.random() * x) + y)` formula to achieve the following  
-  random values:  
--- Player:           2, 3, 4  
--- Zombie:           5, 6, 7  
--- FastZombie:       2, 3, 4, 5  
--- StrongZombie:     2, 3, 4, 5, 6, 7, 8, 9  
--- RangedZombie:     2, 3, 4, 5, 6, 7  
--- ExplodingZombie:  3, 4, 5  
+Use `instanceof` to determine what type of object the creature is.  
+Then, based on the type, set a variable called `randomizer` equal to a `Math.floor((Math.random() * x) + y)` formula to achieve the following random values:  
+-- Player:           `2, 3, 4`  
+-- Zombie:           `5, 6, 7`  
+-- FastZombie:       `2, 3, 4, 5`  
+-- StrongZombie:     `2, 3, 4, 5, 6, 7, 8, 9`  
+-- RangedZombie:     `2, 3, 4, 5, 6, 7`  
+-- ExplodingZombie:  `3, 4, 5`  
 Lastly, set the damage to the following formula and return this damage:  
-  `Math.floor((creature.strength / randomizer) + (Math.log(creature.speed) / randomizer * 10))`.
+`Math.floor((creature.strength / randomizer) + (Math.log(creature.speed) / randomizer * 10))`.
 
 **Parameters**  
 `creature`: Player/Zombie/FastZombie/StrongZombie/RangedZombie/ExplodingZombie, The creature instance whose attack damage is to be calculated.
