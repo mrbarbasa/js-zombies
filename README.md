@@ -10,25 +10,25 @@ Player(name, health, strength, speed)
 -----------------------------
 *Creates a player in a zombie-infested world.*
 
-**Parameters**  
-> **name**: string, The player's name.  
-> **health**: number, The player's health.  
-> **strength**: number, The player's strength.  
-> **speed**: number, The player's speed.
+**PARAMETERS**  
+**name**: string, The player's name.  
+**health**: number, The player's health.  
+**strength**: number, The player's strength.  
+**speed**: number, The player's speed.
 
-**Private Properties**  
-> **pack**: array, Default value should be empty.  
-> **maxHealth**: number, Default value should be set to `health`.
+**PRIVATE PROPERTIES**  
+    - **pack**: array, Default value should be empty.  
+    - **maxHealth**: number, Default value should be set to `health`.
 
-**Public Properties**  
-> **name**: string  
-> **health**: number  
-> **strength**: number  
-> **speed**: number  
-> **isAlive**: boolean, Default value should be `true`.  
-> **equipped**: boolean, Default value should be `false`.  
-> **getPack**: method, Returns private variable `pack`.  
-> **getMaxHealth**: method, Returns private variable `maxHealth`.
+**PUBLIC PROPERTIES**  
+`name`: string  
+`health`: number  
+`strength`: number  
+`speed`: number  
+`isAlive`: boolean, Default value should be `true`.  
+`equipped`: boolean, Default value should be `false`.  
+`getPack`: method, Returns private variable `pack`.  
+`getMaxHealth`: method, Returns private variable `maxHealth`.
 
 
 Item(name)
@@ -36,10 +36,10 @@ Item(name)
 *Creates an item.*
 
 **Parameters**  
-> **name**: string, The item's name.
+    - **name**: string, The item's name.
 
 **Public Properties**  
-> **name**: string
+    - **name**: string
 
 
 Weapon(name, damage)
@@ -51,11 +51,11 @@ Use the call method on the Item constructor.
 Set Weapon's prototype to a new instance of Item.
 
 **Parameters**  
-**name**: string, The weapon's name.  
-**damage**: number, The weapon's damage.
+`name`: string, The weapon's name.  
+`damage`: number, The weapon's damage.
 
 **Public Properties**  
-**damage**: number
+`damage`: number
 
 
 Food(name, energy)
@@ -67,11 +67,11 @@ Use the call method on the Item constructor.
 Set Food's prototype to a new instance of Item.
 
 **Parameters**  
-> **name**: string, The food's name.  
-> **energy**: number, The energy the food provides.
+**name**: string, The food's name.  
+**energy**: number, The energy the food provides.
 
 **Public Properties**  
-> **energy**: number
+**energy**: number
 
 
 checkPack()
