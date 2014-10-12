@@ -6,31 +6,6 @@
 
 ---
 
-Player(name, health, strength, speed)
------------------------------
-*Creates a player in a zombie-infested world.*
-
-**Parameters**  
-`name`: string, The player's name.  
-`health`: number, The player's health.  
-`strength`: number, The player's strength.  
-`speed`: number, The player's speed.
-
-**Private Properties**  
-`pack`: array, Default value should be empty.  
-`maxHealth`: number, Default value should be set to `health`.
-
-**Public Properties**  
-`name`: string  
-`health`: number  
-`strength`: number  
-`speed`: number  
-`isAlive`: boolean, Default value should be `true`.  
-`equipped`: Weapon/boolean, Default value should be `false`.  
-`getPack`: method, Returns private variable `pack`.  
-`getMaxHealth`: method, Returns private variable `maxHealth`.
-
-
 Item(name)
 -----------------------------
 *Creates an item.*
@@ -72,6 +47,31 @@ Set Food's prototype to a new instance of Item.
 
 **Public Properties**  
 `energy`: number
+
+
+Player(name, health, strength, speed)
+-----------------------------
+*Creates a player in a zombie-infested world.*
+
+**Parameters**  
+`name`: string, The player's name.  
+`health`: number, The player's health.  
+`strength`: number, The player's strength.  
+`speed`: number, The player's speed.
+
+**Private Properties**  
+`pack`: array, Default value should be empty.  
+`maxHealth`: number, Default value should be set to `health`.
+
+**Public Properties**  
+`name`: string  
+`health`: number  
+`strength`: number  
+`speed`: number  
+`isAlive`: boolean, Default value should be `true`.  
+`equipped`: Weapon/boolean, Default value should be `false`.  
+`getPack`: method, Returns private variable `pack`.  
+`getMaxHealth`: method, Returns private variable `maxHealth`.
 
 
 checkPack()
