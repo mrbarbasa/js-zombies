@@ -10,14 +10,14 @@ Player(name, health, strength, speed)
 -----------------------------
 Creates a player in a zombie-infested world.
 
-**Parameters**
-  *name*: string, The player's name.
-  *health*: number, The player's health.
-  *strength*: number, The player's strength.
-  *speed*: number, The player's speed.
+**Parameters**  
+*name*: string, The player's name.  
+*health*: number, The player's health.  
+*strength*: number, The player's strength.  
+*speed*: number, The player's speed.
 
-**Private Properties**
-**pack**: array, Default value should be empty.
+**Private Properties**<br>
+**pack**: array, Default value should be empty.<br>
 **maxHealth**: number, Default value should be set to `health`.
 
 **Public Properties**
