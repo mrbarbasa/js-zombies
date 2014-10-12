@@ -26,7 +26,7 @@ Player(name, health, strength, speed)
 `strength`: number  
 `speed`: number  
 `isAlive`: boolean, Default value should be `true`.  
-`equipped`: boolean, Default value should be `false`.  
+`equipped`: Weapon/boolean, Default value should be `false`.  
 `getPack`: method, Returns private variable `pack`.  
 `getMaxHealth`: method, Returns private variable `maxHealth`.
 
@@ -178,8 +178,7 @@ If nothing is equipped, prints a message saying so.
 Also returns the equipped weapon's name or false if nothing is equipped.
 You should be able to invoke this function on a Player instance.
 
-**Parameters**  
-`weapon name or false`: string/boolean, Weapon name or false if nothing is equipped.
+**Returns**: weapon name or `false`: string/boolean, Weapon name or `false` if nothing is equipped.
 
 
 attack(zombie)
