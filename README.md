@@ -8,17 +8,17 @@
 
 Player(name, health, strength, speed)
 -----------------------------
-Creates a player in a zombie-infested world.
+*Creates a player in a zombie-infested world.*
 
 **Parameters**  
-**name**: *string*, The player's name.  
-**health**: *number*, The player's health.  
-**strength**: *number*, The player's strength.  
-**speed**: *number*, The player's speed.
+**name**: string, The player's name.  
+**health**: number, The player's health.  
+**strength**: number, The player's strength.  
+**speed**: number, The player's speed.
 
 **Private Properties**  
-**pack**: *array*, Default value should be empty.  
-**maxHealth**: *number*, Default value should be set to `health`.
+**pack**: `array`, Default value should be empty.  
+**maxHealth**: `number`, Default value should be set to `health`.
 
 **Public Properties**  
 **name**: *string*  
@@ -35,17 +35,17 @@ Item(name)
 -----------------------------
 Creates an item.
 
-**Parameters**
+**Parameters**  
 **name**: string, The item's name.
 
-**Public Properties**
+**Public Properties**  
 **name**: string
 
 
 Weapon(name, damage)
 -----------------------------
-Creates a weapon item.
-Weapon items can be equipped for use in battle.
+*Creates a weapon item.*  
+*Weapon items can be equipped for use in battle.*
 
 Use the call method on the Item constructor.
 Set Weapon's prototype to a new instance of Item.
