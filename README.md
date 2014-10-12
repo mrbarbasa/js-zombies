@@ -7,7 +7,7 @@
 
 For each test you complete:
 
-1. Save `constructors.js`.
+1. Save `zombies.js`.
 2. Reload [http://localhost:8080](http://localhost:8080) in Chrome.
 3. Check if the test passes.
 4. If it passes, commit your work.
