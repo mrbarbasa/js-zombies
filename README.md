@@ -11,24 +11,24 @@ Player(name, health, strength, speed)
 Creates a player in a zombie-infested world.
 
 **Parameters**  
-*name*: string, The player's name.  
-*health*: number, The player's health.  
-*strength*: number, The player's strength.  
-*speed*: number, The player's speed.
+**name**: *string*, The player's name.  
+**health**: *number*, The player's health.  
+**strength**: *number*, The player's strength.  
+**speed**: *number*, The player's speed.
 
-**Private Properties**<br>
-**pack**: array, Default value should be empty.<br>
-**maxHealth**: number, Default value should be set to `health`.
+**Private Properties**  
+**pack**: *array*, Default value should be empty.  
+**maxHealth**: *number*, Default value should be set to `health`.
 
-**Public Properties**
-**name**: string
-**health**: number
-**strength**: number
-**speed**: number
-**isAlive**: boolean, Default value should be `true`.
-**equipped**: boolean, Default value should be `false`.
-**getPack**: method, Returns private variable `pack`.
-**getMaxHealth**: method, Returns private variable `maxHealth`.
+**Public Properties**  
+**name**: *string*  
+**health**: *number*  
+**strength**: *number*  
+**speed**: *number*  
+**isAlive**: *boolean*, Default value should be `true`.  
+**equipped**: *boolean*, Default value should be `false`.  
+**getPack**: *method*, Returns private variable `pack`.  
+**getMaxHealth**: *method*, Returns private variable `maxHealth`.
 
 
 Item(name)
