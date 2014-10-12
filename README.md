@@ -17,23 +17,23 @@ Player(name, health, strength, speed)
 **speed**: number, The player's speed.
 
 **Private Properties**  
-**pack**: `array`, Default value should be empty.  
-**maxHealth**: `number`, Default value should be set to `health`.
+**pack**: array, Default value should be empty.  
+**maxHealth**: number, Default value should be set to `health`.
 
 **Public Properties**  
-**name**: *string*  
-**health**: *number*  
-**strength**: *number*  
-**speed**: *number*  
-**isAlive**: *boolean*, Default value should be `true`.  
-**equipped**: *boolean*, Default value should be `false`.  
-**getPack**: *method*, Returns private variable `pack`.  
-**getMaxHealth**: *method*, Returns private variable `maxHealth`.
+**name**: string  
+**health**: number  
+**strength**: number  
+**speed**: number  
+**isAlive**: boolean, Default value should be `true`.  
+**equipped**: boolean, Default value should be `false`.  
+**getPack**: method, Returns private variable `pack`.  
+**getMaxHealth**: method, Returns private variable `maxHealth`.
 
 
 Item(name)
 -----------------------------
-Creates an item.
+*Creates an item.*
 
 **Parameters**  
 **name**: string, The item's name.
@@ -47,56 +47,54 @@ Weapon(name, damage)
 *Creates a weapon item.*  
 *Weapon items can be equipped for use in battle.*
 
-Use the call method on the Item constructor.
+Use the call method on the Item constructor.  
 Set Weapon's prototype to a new instance of Item.
 
-**Parameters**
-**name**: string, The weapon's name.
+**Parameters**  
+**name**: string, The weapon's name.  
 **damage**: number, The weapon's damage.
 
-**Public Properties**
+**Public Properties**  
 **damage**: number
 
 
 Food(name, energy)
 -----------------------------
-Creates a food item.
-Food items give energy, restoring health to the player.
+*Creates a food item.*  
+*Food items give energy, restoring health to the player.*
 
-Use the call method on the Item constructor.
+Use the call method on the Item constructor.  
 Set Food's prototype to a new instance of Item.
 
-**Parameters**
-**name**: string, The food's name.
+**Parameters**  
+**name**: string, The food's name.  
 **energy**: number, The energy the food provides.
 
-**Public Properties**
+**Public Properties**  
 **energy**: number
 
 
 checkPack()
 -----------------------------
-Player checks the contents of their pack.
+*Player checks the contents of their pack.*  
 
-Nicely format and print the items in the player's pack.
-To access the pack, be sure to use Player's getPack method.
+Nicely format and print the items in the player's pack.  
+To access the pack, be sure to use Player's getPack method.  
 You should be able to invoke this function on a Player instance.
 
 
 takeItem(item)
 -----------------------------
-Player takes an item from the world and places it into their pack.
+*Player takes an item from the world and places it into their pack.*
 
-Player's pack can only hold a maximum of 3 items, so if they try to add more
- than that to the pack, return false.
-Before returning true or false, print a message containing the player's
- name and item's name if successful.  Otherwise, print a message saying
- that the pack is full so the item could not be stored.
-Note: The player is allowed to store similar items (items with the same name).
+Player's pack can only hold a maximum of 3 items, so if they try to add more than that to the pack, return false.  
+Before returning true or false, print a message containing the player's name and item's name if successful.  
+Otherwise, print a message saying that the pack is full so the item could not be stored.  
+Note: The player is allowed to store similar items (items with the same name).  
 You should be able to invoke this function on a Player instance.
 
-**Parameters**
-**item**: Item/Weapon/Food, The item to take.
+**Parameters**  
+**item**: Item/Weapon/Food, The item to take.  
 **Returns**: boolean, Whether player was able to store item in pack.
 
 
