@@ -239,164 +239,6 @@
 
 
 /**
- * Calculates the attack damage of a creature instance.
- *
- * Use `instanceof` to determine what type of object creature is.
- * Then, based on the type, set a variable called `randomizer` equal to
- *   a `Math.floor((Math.random() * x) + y)` formula to achieve the following
- *   random values:
- * -- Player:           2, 3, 4
- * -- Zombie:           5, 6, 7
- * -- FastZombie:       2, 3, 4, 5
- * -- StrongZombie:     2, 3, 4, 5, 6, 7, 8, 9
- * -- RangedZombie:     2, 3, 4, 5, 6, 7
- * -- ExplodingZombie:  3, 4, 5
- * Lastly, set the damage to the following formula and return this damage:
- *   `Math.floor((creature.strength / randomizer) + (Math.log(creature.speed) / randomizer * 10))`.
- *
- * @name calculateAttackDamage
- * @param {Player/Zombie/FastZombie/StrongZombie/RangedZombie/ExplodingZombie} creature
- *   The creature instance whose attack damage is to be calculated.
- * @return {number}   The amount of damage the creature will inflict.
- */
-
-
-/**
- * Zombie takes damage.
- *
- * The zombie's health decreases by the amount of damage taken.
- * The zombie's health should not become lower than 0.
- * If the zombie's health is 0, set their `isAlive` property to false.
- * If the zombie is dead, print a message that the zombie is slain.
- * You should be able to invoke this function on a Zombie instance.
- *
- * @name takeDamage
- * @param {number} damage   The amount of damage the zombie receives.
- */
-
-
-/**
- * Player attacks a zombie.
- *
- * Calculate the player's base attack damage by passing this instance to the
- *   calculateAttackDamage function.
- * If the player has a weapon equipped, print a message with the weapon's name.
- *   The total damage then becomes the base player damage plus the weapon damage.
- * If the player has no weapon equipped, print any weaponless attack to console.
- *   In this case, the total damage is just the base player damage.
- * The zombie then takes all this damage.
- * You should be able to invoke this function on a Player instance.
- *
- * @name attack
- * @param {Zombie} zombie   The zombie to attack.
- * @return {number}         Damage dealt by attacking.
- */
-
-
-/**
- * Player takes damage.
- *
- * The player's health decreases by the amount of damage taken.
- * The player's health should not become lower than 0.
- * If the player's health is 0, set their `isAlive` property to false.
- * If the player is dead, print a message that they're dead and the game is over.
- * You should be able to invoke this function on a Player instance.
- *
- * @name takeDamage
- * @param {number} damage   The amount of damage the player receives.
- */
-
-
-/**
- * Zombie attacks a player.
- *
- * Calculate the zombie's attack damage by passing this instance to the
- *   calculateAttackDamage function.  Player takes this amount of damage.
- * Print any zombie attack message you'd like; just include the player's name.
- * You should be able to invoke this function on a Zombie instance.
- *
- * @name attack
- * @param {Player} player   The player to attack.
- * @return {number}         Damage dealt by attacking.
- */
-
-
-/**
- * FastZombie charges at full speed.
- *
- * Calculate the zombie's base attack damage by passing this instance to the 
- *   calculateAttackDamage function.  Player takes this amount of damage.
- * Print any zombie charge message you'd like; just include the player's name.
- *
- * Player takes additional damage if the zombie's speed is greater than the player's.
- * Additional damage should equal the floor of half the base zombie attack damage.
- *
- * You should be able to invoke this function on a FastZombie instance.
- *
- * @name charge
- * @param {Player} player   The player to charge at.
- * @return {number}         Damage dealt by charging.
- */
-
-
-/**
- * StrongZombie crushes with might.
- *
- * Calculate the zombie's base attack damage by passing this instance to the 
- *   calculateAttackDamage function.  Player takes this amount of damage.
- * Print any zombie crush message you'd like; just include the player's name.
- *
- * Player takes additional damage if the zombie's strength is greater than the player's.
- * Additional damage should equal the floor of 80% of the base zombie attack damage.
- *
- * You should be able to invoke this function on a StrongZombie instance.
- *
- * @name crush
- * @param {Player} player   The player to crush.
- * @return {number}         Damage dealt by crushing.
- */
-
-
-/**
- * RangedZombie spits toxic ooze from afar.
- *
- * Calculate the zombie's base attack damage by passing this instance to the 
- *   calculateAttackDamage function.  Player takes this amount of damage.
- * Print any zombie spit message you'd like; just include the player's name.
- *
- * Player takes additional damage if their current health is less than half of max health.
- * Additional damage should equal the floor of 70% of the base zombie attack damage.
- *
- * You should be able to invoke this function on a RangedZombie instance.
- *
- * @name spit
- * @param {Player} player   The player to spit at.
- * @return {number}         Damage dealt by spitting.
- */
-
-
-/**
- * ExplodingZombie explodes burning flesh and guts in every direction.
- *
- * Calculate the zombie's base attack damage by passing this instance to the 
- *   calculateAttackDamage function.  Player takes this amount of damage.
- * Print any zombie explode message you'd like; just include the player's name.
- *
- * Player takes additional damage if the zombie's speed is greater than the
- *   player's and the player's current health is less than half of max health.
- * Additional damage should equal twice the base zombie attack damage.
- *
- * ExplodingZombie should now be dead (health set to 0, `isAlive` set to false).
- *
- * You should be able to invoke this function on an ExplodingZombie instance.
- *
- * @name explode
- * @param {Player} player   The player to explode by.
- * @return {number}         Damage dealt by exploding.
- */
-
-
-/**
  * Sample run.
  * Feel free to edit this and check your game logic.
  */
@@ -410,11 +252,11 @@ function runGame() {
 
   // var shovel = new Weapon("shovel", 15);
   // var sandwich = new Food("sandwich", 30);
-  // var essence = new Weapon("chainsaw", 25);
+  // var chainsaw = new Weapon("chainsaw", 25);
 
   // player.takeItem(shovel);
   // player.takeItem(sandwich);
-  // player.takeItem(essence);
+  // player.takeItem(chainsaw);
   // player.discardItem(new Weapon("scythe", 21));
   // player.discardItem(shovel);
   // player.checkPack();
@@ -422,7 +264,7 @@ function runGame() {
   // player.checkPack();
 
   // player.equippedWith();
-  // player.useItem(essence);
+  // player.useItem(chainsaw);
   // player.equippedWith();
   // player.checkPack();
 
@@ -435,16 +277,4 @@ function runGame() {
   // player.useItem(sandwich);
   // console.log("After health: " + player.health);
   // player.checkPack();
-
-  // console.log("Zombie max health: " + zombie.health);
-  // player.attack(zombie);
-  // console.log("Zombie health: " + zombie.health);
-  // player.attack(zombie);
-  // console.log("Zombie health: " + zombie.health);
-
-  // console.log("Player max health: " + player.health);
-  // zombie.attack(player);
-  // console.log("Player health: " + player.health);
-  // zombie.attack(player);
-  // console.log("Player health: " + player.health);
 }
