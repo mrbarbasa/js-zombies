@@ -410,11 +410,11 @@ function runGame() {
 
   // var shovel = new Weapon("shovel", 15);
   // var sandwich = new Food("sandwich", 30);
-  // var essence = new Weapon("chainsaw", 25);
+  // var chainsaw = new Weapon("chainsaw", 25);
 
   // player.takeItem(shovel);
   // player.takeItem(sandwich);
-  // player.takeItem(essence);
+  // player.takeItem(chainsaw);
   // player.discardItem(new Weapon("scythe", 21));
   // player.discardItem(shovel);
   // player.checkPack();
@@ -422,7 +422,7 @@ function runGame() {
   // player.checkPack();
 
   // player.equippedWith();
-  // player.useItem(essence);
+  // player.useItem(chainsaw);
   // player.equippedWith();
   // player.checkPack();
 
