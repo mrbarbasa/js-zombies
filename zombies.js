@@ -266,7 +266,7 @@
  *
  * The zombie's health decreases by the amount of damage taken.
  * The zombie's health should not become lower than 0.
- * If the zombie's health is 0, set their isAlive property to `false`.
+ * If the zombie's health is 0, set their `isAlive` property to false.
  * If the zombie is dead, print a message that the zombie is slain.
  * You should be able to invoke this function on a Zombie instance.
  *
@@ -298,7 +298,7 @@
  *
  * The player's health decreases by the amount of damage taken.
  * The player's health should not become lower than 0.
- * If the player's health is 0, set their isAlive property to `false`.
+ * If the player's health is 0, set their `isAlive` property to false.
  * If the player is dead, print a message that they're dead and the game is over.
  * You should be able to invoke this function on a Player instance.
  *
@@ -324,7 +324,7 @@
 /**
  * FastZombie charges at full speed.
  *
- * Calculate the zombie's attack damage by passing this instance to the 
+ * Calculate the zombie's base attack damage by passing this instance to the 
  *   calculateAttackDamage function.  Player takes this amount of damage.
  * Print any zombie charge message you'd like; just include the player's name.
  *
@@ -334,7 +334,7 @@
  * You should be able to invoke this function on a FastZombie instance.
  *
  * @name charge
- * @param {Player} player
+ * @param {Player} player   The player to charge at.
  * @return {number}         Damage dealt by charging.
  */
 
@@ -342,17 +342,17 @@
 /**
  * StrongZombie crushes with might.
  *
- * Calculate the zombie's attack damage by passing this instance to the 
+ * Calculate the zombie's base attack damage by passing this instance to the 
  *   calculateAttackDamage function.  Player takes this amount of damage.
  * Print any zombie crush message you'd like; just include the player's name.
  *
  * Player takes additional damage if the zombie's strength is greater than the player's.
- * Additional damage should equal the floor of 80% of the zombie attack damage.
+ * Additional damage should equal the floor of 80% of the base zombie attack damage.
  *
  * You should be able to invoke this function on a StrongZombie instance.
  *
  * @name crush
- * @param {Player} player
+ * @param {Player} player   The player to crush.
  * @return {number}         Damage dealt by crushing.
  */
 
@@ -360,17 +360,17 @@
 /**
  * RangedZombie spits toxic ooze from afar.
  *
- * Calculate the zombie's attack damage by passing this instance to the 
+ * Calculate the zombie's base attack damage by passing this instance to the 
  *   calculateAttackDamage function.  Player takes this amount of damage.
  * Print any zombie spit message you'd like; just include the player's name.
  *
  * Player takes additional damage if their current health is less than half of max health.
- * Additional damage should equal the floor of 70% of the zombie attack damage.
+ * Additional damage should equal the floor of 70% of the base zombie attack damage.
  *
  * You should be able to invoke this function on a RangedZombie instance.
  *
  * @name spit
- * @param {Player} player
+ * @param {Player} player   The player to spit at.
  * @return {number}         Damage dealt by spitting.
  */
 
@@ -378,20 +378,20 @@
 /**
  * ExplodingZombie explodes burning flesh and guts in every direction.
  *
- * Calculate the zombie's attack damage by passing this instance to the 
+ * Calculate the zombie's base attack damage by passing this instance to the 
  *   calculateAttackDamage function.  Player takes this amount of damage.
  * Print any zombie explode message you'd like; just include the player's name.
  *
  * Player takes additional damage if the zombie's speed is greater than the
  *   player's and the player's current health is less than half of max health.
- * Additional damage should equal twice the zombie attack damage.
+ * Additional damage should equal twice the base zombie attack damage.
  *
- * ExplodingZombie should now be dead (health set to 0, isAlive set to `false`).
+ * ExplodingZombie should now be dead (health set to 0, `isAlive` set to false).
  *
  * You should be able to invoke this function on an ExplodingZombie instance.
  *
  * @name explode
- * @param {Player} player
+ * @param {Player} player   The player to explode by.
  * @return {number}         Damage dealt by exploding.
  */
 
