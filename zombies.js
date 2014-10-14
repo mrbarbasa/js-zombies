@@ -1,4 +1,6 @@
 /**
+ * Class => Item(name)
+ * -----------------------------
  * Creates an item.
  *
  * @name Item
@@ -8,11 +10,14 @@
 
 
 /**
+ * Class => Weapon(name, damage)
+ * -----------------------------
  * Creates a weapon item.
  * Weapon items can be equipped for use in battle.
  *
- * Use the call method on the Item constructor.
- * Set Weapon's prototype to a new instance of Item.
+ * The Weapon class constructor will call 
+ *   the super class (Item) constructor
+ *   while passing in the 1 Item constructor param
  *
  * @name Weapon
  * @param {string} name     The weapon's name.
@@ -22,11 +27,21 @@
 
 
 /**
+ * Weapon Extends Item Class
+ * -----------------------------
+ */
+
+
+
+/**
+ * Class => Food(name, energy)
+ * -----------------------------
  * Creates a food item.
  * Food items give energy, restoring health to the player.
  *
- * Use the call method on the Item constructor.
- * Set Food's prototype to a new instance of Item.
+ * The Food class constructor will call 
+ *   the super class (Item) constructor
+ *   while passing in the 1 Item constructor param
  *
  * @name Food
  * @param {string} name       The food's name.
@@ -36,6 +51,15 @@
 
 
 /**
+ * Food Extends Item Class
+ * -----------------------------
+ */
+
+
+
+/**
+ * Class => Player(name, health, strength, speed)
+ * -----------------------------
  * Creates a player in a zombie-infested world.
  *
  * @name Player
@@ -57,6 +81,8 @@
 
 
 /**
+ * Player Class Method => checkPack()
+ * -----------------------------
  * Player checks the contents of their pack.
  *
  * Nicely format and print the items in the player's pack.
@@ -68,6 +94,8 @@
 
 
 /**
+ * Player Class Method => takeItem(item)
+ * -----------------------------
  * Player takes an item from the world and places it into their pack.
  *
  * Player's pack can only hold a maximum of 3 items, so if they try to add more
@@ -85,6 +113,8 @@
 
 
 /**
+ * Player Class Method => discardItem(item)
+ * -----------------------------
  * Player discards an item from their pack.
  *
  * Use Array's indexOf method to check if the pack contains the item.
@@ -110,6 +140,8 @@
 
 
 /**
+ * Player Class Method => equip(itemToEquip)
+ * -----------------------------
  * Player equips a weapon item.
  *
  * Player can only equip Weapon instances.
@@ -129,6 +161,8 @@
 
 
 /**
+ * Player Class Method => eat(itemToEat)
+ * -----------------------------
  * Player eats a food item, restoring their health.
  *
  * Player can only eat Food instances.
@@ -147,6 +181,8 @@
 
 
 /**
+ * Player Class Method => useItem(item)
+ * -----------------------------
  * Player uses an item from the pack.
  *
  * If the item is a weapon, the player should equip the item.
@@ -159,6 +195,8 @@
 
 
 /**
+ * Player Class Method => equippedWith()
+ * -----------------------------
  * Player checks their equipment.
  *
  * Prints the player's name and equipped weapon's name.
@@ -172,6 +210,8 @@
 
 
 /**
+ * Class => Zombie(health, strength, speed)
+ * -----------------------------
  * Creates a normal zombie.
  *
  * @name Zombie
@@ -187,10 +227,13 @@
 
 
 /**
+ * Class => FastZombie(health, strength, speed)
+ * -----------------------------
  * Creates a fast zombie.
  *
- * Use the call method on the Zombie constructor.
- * Set FastZombie's prototype to a new instance of Zombie.
+ * The FastZombie class constructor will call 
+ *   the super class (Zombie) constructor
+ *   while passing in the 3 Zombie constructor params
  *
  * @name FastZombie
  * @param {number} health           The zombie's health.
@@ -200,10 +243,20 @@
 
 
 /**
+ * FastZombie Extends Zombie Class
+ * -----------------------------
+ */
+
+
+
+/**
+ * Class => StrongZombie(health, strength, speed)
+ * -----------------------------
  * Creates a strong zombie.
  *
- * Use the call method on the Zombie constructor.
- * Set StrongZombie's prototype to a new instance of Zombie.
+ * The StrongZombie class constructor will call 
+ *   the super class (Zombie) constructor
+ *   while passing in the 3 Zombie constructor params
  *
  * @name StrongZombie
  * @param {number} health           The zombie's health.
@@ -213,10 +266,20 @@
 
 
 /**
+ * StrongZombie Extends Zombie Class
+ * -----------------------------
+ */
+
+
+
+/**
+ * Class => RangedZombie(health, strength, speed)
+ * -----------------------------
  * Creates a ranged zombie.
  *
- * Use the call method on the Zombie constructor.
- * Set RangedZombie's prototype to a new instance of Zombie.
+ * The RangedZombie class constructor will call 
+ *   the super class (Zombie) constructor
+ *   while passing in the 3 Zombie constructor params
  *
  * @name RangedZombie
  * @param {number} health           The zombie's health.
@@ -226,16 +289,34 @@
 
 
 /**
+ * StrongZombie Extends Zombie Class
+ * -----------------------------
+ */
+
+
+
+/**
+ * Class => ExplodingZombie(health, strength, speed)
+ * -----------------------------
  * Creates an exploding zombie.
  *
- * Use the call method on the Zombie constructor.
- * Set ExplodingZombie's prototype to a new instance of Zombie.
+ * The ExplodingZombie class constructor will call 
+ *   the super class (Zombie) constructor
+ *   while passing in the 3 Zombie constructor params
  *
  * @name ExplodingZombie
  * @param {number} health           The zombie's health.
  * @param {number} strength         The zombie's strength.
  * @param {number} speed            The zombie's speed.
  */
+
+
+/**
+ * ExplodingZombie Extends Zombie Class
+ * -----------------------------
+ */
+
+
 
 
 /**

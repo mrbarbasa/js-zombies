@@ -14,6 +14,12 @@ For each test you complete:
 
 ---
 
+### Help
+
+
+
+---
+
 Item(name)
 -----------------------------
 *Creates an item.*
@@ -30,8 +36,9 @@ Weapon(name, damage)
 *Creates a weapon item.*  
 *Weapon items can be equipped for use in battle.*
 
-Use the `call` method on the Item constructor.  
-Set Weapon's prototype to a new instance of Item.
+The Weapon class constructor will call  
+the super class `Item` constructor  
+while passing in the 1 `Item` constructor param
 
 **Parameters**  
 `name`: string, The weapon's name.  
@@ -46,8 +53,9 @@ Food(name, energy)
 *Creates a food item.*  
 *Food items give energy, restoring health to the player.*
 
-Use the `call` method on the Item constructor.  
-Set Food's prototype to a new instance of Item.
+The Food class constructor will call   
+the super class `Item` constructor  
+while passing in the 1 Item constructor param
 
 **Parameters**  
 `name`: string, The food's name.  
@@ -219,6 +227,10 @@ Set FastZombie's prototype to a new instance of Zombie.
 `strength`: number, The zombie's strength.  
 `speed`: number, The zombie's speed.
 
+#### FastZombie Extends Zombie Class
+The FastZombie class will extend the Zombie class prototype
+
+
 
 StrongZombie(health, strength, speed)
 -----------------------------
@@ -231,6 +243,10 @@ Set StrongZombie's prototype to a new instance of Zombie.
 `health`: number, The zombie's health.  
 `strength`: number, The zombie's strength.  
 `speed`: number, The zombie's speed.
+
+#### StrongZombie Extends Zombie Class
+The StrongZombie class will extend the Zombie class prototype
+
 
 
 RangedZombie(health, strength, speed)
@@ -245,6 +261,10 @@ Set RangedZombie's prototype to a new instance of Zombie.
 `strength`: number, The zombie's strength.  
 `speed`: number, The zombie's speed.
 
+#### RangedZombie Extends Zombie Class
+The RangedZombie class will extend the Zombie class prototype
+
+
 
 ExplodingZombie(health, strength, speed)
 -----------------------------
@@ -257,3 +277,7 @@ Set ExplodingZombie's prototype to a new instance of Zombie.
 `health`: number, The zombie's health.  
 `strength`: number, The zombie's strength.  
 `speed`: number, The zombie's speed.
+
+#### ExplodingZombie Extends Zombie Class
+The ExplodingZombie class will extend the Zombie class prototype
+
