@@ -16,7 +16,8 @@ For each test you complete:
 
 ### Help
 
-
+See help with class construction, parameters, properties, and inheritence in  
+[https://github.com/devleague/js-zombies/blob/master/doc/oop-example.pdf](/doc/oop-example.pdf)
 
 ---
 
@@ -47,6 +48,9 @@ while passing in the 1 `Item` constructor param
 **Public Properties**  
 `damage`: number
 
+#### Weapon Extends Item Class
+The Weapon class will extend the Item class prototype
+
 
 Food(name, energy)
 -----------------------------
@@ -63,6 +67,9 @@ while passing in the 1 Item constructor param
 
 **Public Properties**  
 `energy`: number
+
+#### Food Extends Item Class
+The Food class will extend the Item class prototype
 
 
 Player(name, health, strength, speed)
