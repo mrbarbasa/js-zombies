@@ -20,13 +20,18 @@ After creating certain classes, you'll need to extend them using the `Object.cre
 For example, from Jason's https://github.com/devleague/oop-factory-example:
 
 ```
-// CONSTRUCTOR
+// SUPER/BASE CLASS
+function BaseScraper() {
+  console.log('base constructor');
+}
+
+// SUB/CHILD CLASS
 function DudeScraper() {
   console.log('sub constructor DudeScraper');
   this._url = "http://www.dude.com";
 }
 
-// EXTEND BASE CLASS
+// EXTEND SUPER/BASE CLASS
 DudeScraper.prototype = Object.create(BaseScraper.prototype, {
   constructor: {
     value: DudeScraper
@@ -38,13 +43,13 @@ In addition, when asked to call the super class, use the `Function.prototype.cal
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call
 
 ```
-// SUPER CLASS
+// SUPER/BASE CLASS
 function Product(name, price) {
   this.name = name;
   this.price = price;
 }
 
-// CHILD CLASS
+// SUB/CHILD CLASS
 function Food(name, price) {
   Product.call(this, name, price); // Call the super class
   this.category = 'food';
