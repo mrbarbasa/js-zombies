@@ -19,6 +19,34 @@ For each test you complete:
 See help with class construction, parameters, properties, and inheritence in  
 [https://github.com/devleague/js-zombies/blob/master/doc/oop-example.pdf](/doc/oop-example.pdf)
 
+When instructed to call the super class, use the `Function.prototype.call` method.  
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call
+
+```
+// SUPER CLASS
+function Item(name) {
+  this.name = name;
+}
+
+// SUB CLASS
+function Weapon(name, damage) {
+  this.damage = damage;
+  Item.call(this, name); // Call super class
+}
+```
+
+To extend the super class, use the `Object.create` method introduced in  
+https://github.com/devleague/oop-factory-example
+
+```
+// EXTEND SUPER CLASS
+Weapon.prototype = Object.create(Item.prototype, {
+  constructor: {
+    value: Item
+  }
+});
+```
+
 ---
 
 Item(name)
