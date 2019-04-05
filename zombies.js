@@ -289,7 +289,7 @@
 
 
 /**
- * StrongZombie Extends Zombie Class
+ * RangedZombie Extends Zombie Class
  * -----------------------------
  */
 
